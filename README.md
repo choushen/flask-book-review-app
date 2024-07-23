@@ -1,2 +1,55 @@
-# flask-book-review-app
-The idea behind the website was to create a platform where users can create or add to an existing list  of books and then review each book they have read.  The user must first register an account or login with an  existing account before creating or modifying a list and before they can review any books.
+# Book Review Web Application
+
+## Overview
+This web application allows users to create and manage lists of books and write reviews for the books they've read. Users must register and log in to create or modify lists and write reviews.
+
+## Features
+- Use of sessions for user management
+- Authentication for secure access
+- Unique user data management
+- User-friendly interface
+
+## Layout
+The application features the following pages:
+- `welcome.html`: Welcome page
+- `completed.html`: List of reviewed books
+- `main.html`: Main page for book management
+- `login.html` and `registration.html`: User login and registration
+- `review.html`: Page for submitting book reviews
+
+## Architecture
+The application follows a 3-tier architecture:
+1. **Client Tier**: User interface
+2. **Application Tier**: Business logic
+3. **Data Tier**: Database storage using SQLite
+
+### Key Classes
+- **User**: Manages user information and authentication
+  - Fields: `id`, `username`, `password`, `email`, `start_date`, `books`
+- **Collection**: Manages book information and reviews
+  - Fields: `id`, `title`, `description`, `author`, `read`, `review`, `user_id`
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd <repository_directory>
+   ```
+
+2. Set up a virtual environment and install dependencies:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+   pip install -r requirements.txt
+   ```
+
+3. Run the application:
+   ```bash
+   flask run
+   ```
+
+## Usage
+1. Register a new user account.
+2. Log in with the registered account.
+3. Create and manage book lists.
+4. Write and view reviews for books.
