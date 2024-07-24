@@ -1,7 +1,7 @@
 # Book Review Web Application
 
 ## Overview
-This web application allows users to create and manage lists of books and write reviews for the books they've read. Users must register and log in to create or modify lists and write reviews.
+This web application allows users to create and manage lists of books and write reviews for the books they've read. Users must register and log in to create or modify lists and write reviews. Frontend is rudimentary but the main idea was to create backend that supports the features of the app. I will revisit the frontend at somepoint.
 
 ## Features
 - Use of sessions for user management
