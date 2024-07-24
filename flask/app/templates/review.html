@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+     <title>Review</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+   </head>
+   <body>
+     {% extends "base.html" %}
+     {% block content %}
+     <div id="table_head_home">
+      <h2>Reviews</h2>
+     </div>
+     <div id="form">
+         <form action="" method="post" name="Todo">
+           {{ form.hidden_tag() }}
+            <h5>Title</h5>
+           <input type="title" placeholder="Example: Game of Thrones" name="title" value="{{request.form.title}}">
+           {% for error in form.title.errors %} <!--Validating input format-->
+           <span style="color: red;">[{{ error }}]</span>
+           {% endfor %}<br>
+
+             <h5>Review</h5>
+           {{form.review(rows='6', cols ='36')}}
+           {% for error in form.review.errors %} <!--Validating input format-->
+           <span style="color: red;">[{{ error }}]</span>
+           {% endfor %}<br>
+           <p><input type="submit" value="Submit Review"></p>
+           <p>After completing the fields, click the button to add or update your review</p>
+         </form>
+   </div>
+    {% endblock %}
+   </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+     <title>Books Completed</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+     {% extends "base.html" %}
+     {% block content %}
+     <div id="table_head_home">
+      <h2>Completed Books</h2>
+     </div>
+     <table style="width:30%">
+       <tr>
+         <th>Title</th>
+         <th>Description</th>
+         <th>Author</th>
+         <th>Review</th>
+       </tr>
+       {% for book in books %}
+       <tr>
+         <td>{{book.title}}</td>
+         <td>{{book.description}}</td>
+         <td>{{book.author}}</td>
+         <td>{{book.review}}</td>
+       </tr>
+       {% endfor %}
+    </table>
+    {% endblock %}
+   </body>
+</html>
