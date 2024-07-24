@@ -48,6 +48,14 @@ The application follows a 3-tier architecture:
    flask run
    ```
 
+
+## Improvements
+- More responsive styling
+- Password hashing
+- Update the dependencies
+
+
+
 ## Usage
 1. Register a new user account.
 2. Log in with the registered account.
